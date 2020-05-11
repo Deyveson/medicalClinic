@@ -20,17 +20,3 @@ services:
   #   ports:
   #    - 4200:4200
      
-
-  # =============== MySQL Serve ===============
-  # db:
-  #   image: mysql
-  #   command: --default-authentication-plugin=mysql_native_password
-  #   restart: always
-  #   environment:
-  #     MYSQL_ROOT_PASSWORD: clinica
-
-  # adminer:
-  #   image: adminer
-  #   restart: always
-  #   ports:
-  #     - 8080:8080

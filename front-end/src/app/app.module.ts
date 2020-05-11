@@ -6,16 +6,20 @@ import { AppComponent } from './app.component';
 import {LoginModule} from './components/login/login.module';
 import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {HomeModule} from './components/home/home.module';
+import {AppointmentModule} from './components/appointment/appointment.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
     LoginModule,
+    HomeModule,
+    AppointmentModule,
     BrowserAnimationsModule
   ],
   providers: [],
