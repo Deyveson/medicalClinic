@@ -1,0 +1,36 @@
+version: '3.1'
+
+services:
+
+  backend:
+    image: 'maven:3-jdk-8-alpine'
+    volumes:
+     - ./back-end:/app/
+    command: mvn clean spring-boot:run
+    working_dir: /app
+    ports:
+     - 8080:8080
+
+  frontend:
+    image: 'node:lts-alpine'
+    volumes:
+     - ./front-end:/app/
+    command: sh -c "yarn install && yarn start"
+    working_dir: /app
+    ports:
+     - 4200:4200
+     
+
+  # =============== MySQL Serve ===============
+  # db:
+  #   image: mysql
+  #   command: --default-authentication-plugin=mysql_native_password
+  #   restart: always
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: clinica
+
+  # adminer:
+  #   image: adminer
+  #   restart: always
+  #   ports:
+  #     - 8080:8080
