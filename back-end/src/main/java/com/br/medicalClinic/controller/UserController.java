@@ -26,7 +26,7 @@ public class UserController {
     }
 
     @CrossOrigin
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
     public Object[] login(@RequestParam(value = "nick", defaultValue = "", required = true) String nick,
                          @RequestParam(value = "senha", defaultValue = "", required = true) String senha){
         return clinicaService.loginClient(nick, senha);

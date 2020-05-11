@@ -11,14 +11,14 @@ services:
     ports:
      - 8080:8080
 
-  frontend:
-    image: 'node:lts-alpine'
-    volumes:
-     - ./front-end:/app/
-    command: sh -c "yarn install && yarn start"
-    working_dir: /app
-    ports:
-     - 4200:4200
+  # frontend:
+  #   image: 'node:lts-alpine'
+  #   volumes:
+  #    - ./front-end:/app/
+  #   command: sh -c "yarn install && yarn start"
+  #   working_dir: /app
+  #   ports:
+  #    - 4200:4200
      
 
   # =============== MySQL Serve ===============
