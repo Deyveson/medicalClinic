@@ -34,7 +34,7 @@ public class User {
         this.appointments = appointments;
     }
 
-    public User() {
+    public User(User client) {
     }
 
     public Long getId() {

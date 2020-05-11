@@ -5,12 +5,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import java.util.Collection;
+import java.util.List;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-    @Query(
-            value = "SELECT * FROM USER U WHERE U.NAME = :nick and U.PASSWORD = :senha",
+    @Query(value = "select * from clinica.user u where u.name = ?1 and u.password = ?2",
             nativeQuery = true)
-    Collection<User> findClient(String nick, String senha);
+    Object[] findClient(String nick, String senha);
 }

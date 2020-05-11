@@ -12,5 +12,5 @@ public interface ClinicService {
     List <Doctor> allDoctor();
     Appointment registerAppointment(Appointment appointment);
     List <Appointment> allAppointment();
-    Boolean loginClient(String nick, String senha);
+    Object[] loginClient(String nick, String senha);
 }

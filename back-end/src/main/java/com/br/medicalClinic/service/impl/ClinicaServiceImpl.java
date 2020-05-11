@@ -46,9 +46,9 @@ public class ClinicaServiceImpl implements ClinicService {
         return user;
     }
 
-    public Boolean loginClient(String nick, String senha){
-        userRepository.findClient(nick, senha);
-        return true;
+    public Object[] loginClient(String nick, String senha){
+        Object[] user = userRepository.findClient(nick, senha);
+        return user;
     }
 
     @Override
